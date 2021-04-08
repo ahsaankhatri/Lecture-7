@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">    
+  <h3><%= page %></h3><br>
+  <div class="row">
+    <form action='../<%=student._id %>/update' method='POST'>
+      <input type='text' name='name' placeholder="name" required value='<%=student.name %>'><br>
+      <input type="text" name='regno' placeholder="Reg No" required value='<%=student.regno %>'><br>
+      <input type="text" name='course' placeholder="Course" required value='<%=student.course %>'><br>
+      <input type="submit" value="Update Student">
+    </form>
+  </div>
+</div>
+</body>
+<% include partials/script %>
+</html>
